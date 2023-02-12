@@ -1,0 +1,99 @@
+*{
+    margin:0%;
+    padding: 0%;
+    box-sizing: border-box;
+    font-family: Arial;
+    
+}
+body
+{
+    background-color: #ece8e8;
+    background-image:url(https://classic.set.or.th/dat/vdoArticle/Image/Images_1648478545463.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    
+}
+.sideber a
+{
+    text-decoration:none;
+    color: #000000;
+}
+.sideber
+{
+    width: 105px;
+    background-color:#7FFFD4;
+    min-height: 100vh;
+    transition: .3s;
+    overflow:hidden;
+}
+.sideber:hover{
+    width: 220px;
+}
+.sideber:hover ul li a span
+{
+    opacity: 1;
+    visibility: visible;
+}
+ul li a
+{
+    display: flex;
+    align-items: center;
+    padding: 25px 0 25px 25px;
+    font-size: 15px;
+}
+ul li a:hover
+{
+    background-color:#2E8B57;
+}
+ul li a i
+{
+    width: 50px;
+    color: rgb(0, 0, 0);
+}
+ul li a span
+{
+    margin-left: 10px;
+    opacity: 0;
+    visibility: 0;
+    transition: .3s ease-in;
+}
+.Heading_43
+{
+    margin: 0px;
+    padding: 0px;
+    margin-top: -45%;
+}
+.Picture_43
+{
+    margin-left: 15%;
+    width: 700px;
+    height: 550px;
+
+}
+.Picture_43 .Blockdiagram_43i
+{
+    margin-top: 10%;
+}
+.Data_Analyzer_43i
+{
+    width: 39%;
+    margin-left: 60%;
+    margin-top: -41.1%;
+    backdrop-filter: blur(10px);
+    background-color: rgba(255,255,255, 0.4); 
+    border-radius: 2%;
+
+}
+.Data_Analyzer_43i .Principle_3
+{
+    width: 38%;
+    height: 40px;
+    margin-left: 30.5%;
+}
+.Text_Data_43i
+{
+    width: 90%;
+    margin-left:5%;
+    height: 85vh;
+}

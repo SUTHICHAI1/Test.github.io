@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="th">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width-device-width , initial-scale-1.0">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/fontawesome.min.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css" integrity="sha384-xeJqLiuOvjUBq3iGOjvSQSIlwrpqjSHXpduPd6rQpuiM3f5/ijby8pCsnbu5S81n" crossorigin="anonymous">
+        <link rel="stylesheet" href="42i.css">
+
+    </head>
+    <title>42i Analyzer</title>
+    <body>
+        <div class="sideber">
+            <ul>
+                <li><a href="Home.html">
+                    <i class="bi bi-house-fill"style='font-size:40px'></i>
+                    <span>Home</span>
+    
+                </a></li>
+                <li> <a href="42i.html">
+                    <i class="bi bi-pc-horizontal"style='font-size:40px'></i>
+                    <span>42i Analyzer</span>
+                </a></li>
+                <li> <a href="43i.html">
+                    <i class="bi bi-pc-horizontal"style='font-size:40px'></i>
+                    <span>43i Analyzer</span>
+                </a></li>
+                <li> <a href="">
+                    <i class="bi bi-pc-horizontal" style='font-size:40px'></i>
+                    <span>48i Analyzer</span>
+                </a></li>
+                <li> <a href="">
+                    <i class="bi bi-pc-horizontal" style='font-size:40px'></i>
+                    <span>49i Analyzer</span>
+                </a></li>
+            </ul>
+        </div>
+        <div class="Heading">
+            <div class="Heading_Text">
+                <h1><center>Manual 42i Analyzer</center></h1>
+            </div>
+        </div>
+        <div class="Picture">
+            <div class="Blockdiagram_42i">
+                <center><img src="Picture\Block Diagram 42i.PNG" width="658" height="368"></center>
+            </div>
+        </div>
+        <div class="Data_Analyzer_42i">
+            <div class="Principle">
+                <center><h2>หลักการทำงาน</h2></center>
+            </div>
+            <div class="Text_Data_42i">
+                <p>
+                         &nbsp;  &nbsp;  &nbsp; &nbsp;Model 42i ใช้หลัการทำงานโดยที่ NO (ไนตริกออกไซด์) และ O3 (โอโซน) 
+                        มีปฏิกิริยากันซึ่งทำให้เกิดแสงที่มีลักษณะเฉพาะที่มีความเข้มข้นเป็นสัดส่วนเชิงเส้นกับความเข้มข้นของ NO 
+                        และผลของการปล่อยแสงเมื่อโมเลกุลของ NO2 ที่ถูกกระตุ้นและสลายตัวไปเป็นสถานะพื้น 
+                        (กลับมาเป็น NO ซึ่งจะคายพลังงานจาก NO2 กลับมาเป็น NO จะทำให้เกิดแสงขึ้น) <br>
+                        
+                        <center><br>NO + O3 --> NO2 + O2 + hv <br></center>
+
+                        <br>&nbsp;  &nbsp;  &nbsp; &nbsp;ตัวอย่างของอากาศจะถูกดูดเข้า Model 42i ผ่านช่องทาง Sample ดังในรูป 1-1 จากนั้นตัวอย่างจะไหลผ่านตัว 
+                        Capillary และไหลไปยัง Solenoid Valve ถ้าหากเป็น NO จะสามารถไหลไปยังห้อง Reaction Chamber ได้เลย 
+                        แต่ถ้าหากเป็น NO2 จะต้องแปลงเป็น NO ก่อนที่จะทำปฏิกิริยาด้วยตัวแปลง โมลิปดีนัม NO2 – to – NO ที่ร้อนประมาณ 325 องศา 
+                        ถึงจะสามารถทำปฏิกิริยา Chemiluminescent reaction ได้<br>
+
+                        <br>&nbsp;  &nbsp;  &nbsp; &nbsp;Dry Air (อากาศแห้ง) เข้าสู่ Model 42i ผ่านช่องทาง Dry Air แล้วผ่าน Flow Switch จากนั้นก็เข้าสู่เครื่องผลิต O3 
+                        ซึ่งจะสร้าง O3 ที่จำเป็นต่อการทำปฏิกิริยา Chemiluminescent reaction จากนั้นก็เข้าสู่ O3 Cleanser เพื่อไล่ความชื่นออกจาก 
+                        O3 และไหลผ่าน Capillary ไปยังห้อง Reaction Chamber ซึ่ง O3 จะทำปฏิกิริยากับ NO ที่เป็นตัวอย่าง เพื่อผลิตโมเลกุล NO2 ที่ถูกกระตุ้นขึ้น 
+                        จากนั้นตัว PMT (Photomultiplier) จะเป็นตัวที่ค่อยวัดค่าแสงที่เกิดจากการทำปฏิกิริยา จากนั้นไอเสียที่เกิดจากการทำปฏิกิริยา จากห้อง Reaction Chamber 
+                        ไหลไปยัง O3 Converter/scrubber (เพราะ O3 เป็นอันตรายต่อระบบทางเดินหายใจ) ไปยัง Pump และออกไปยังช่อง Exhaust <br>
+
+                        <br>&nbsp;  &nbsp;  &nbsp; &nbsp;ความเข้มข้นของ NO และ NOx ที่คำนวณได้จะถูกเก็บไว้ในหน่วยความจำ 
+                        ซึ่งความแตกต่างระหว่างความเข้มข้นของ NO และ NOx จะใช้คำนวณความเข้มข้นของ NO2 รุ่น 42i 
+                        จะส่งค่าความเข้มข้นของ NO ,NO2 ,NOx ไปยังจอแสดงผลด้านหน้า และทาง Output Analog ,Serial port ,Ethernet
+                </p>
+
+            </div>
+        </div>
+        <div class="reaction"> 
+            <div class="Chemiluminescent_reaction">
+                <center><button id="myBtn1"><img src="Picture\Chemiliuminescence Reaction.PNG" width="100px" height="100px"></button></center>
+            </div>
+            <div class="PMT">
+                <center><button id="myBtn2"><img src="Picture\PMT2.jpg" width="100px" height="100px"></button></center>
+            </div>
+            <div class="ozone">
+                <center><button id="myBtn3"><img src="Picture\Gen O3.jpg" width="100px" height="100px"></button></center>
+            </div>
+            <div class="State">
+                <center><button id="myBtn4"><img src="Picture\State.PNG" width="100px" height="100px" alt=""></button></center>
+            </div>
+
+        </div>
+
+        <div id="myModal1" class="modal1">
+
+            <!-- Modal content -->
+             <div class="modal-content1">
+              <span class="close1">&times;</span>
+              <center><h2> Chemiluminescence Reaction</h2></center>
+              <br><center><img src="Picture\Chemiliuminescence Reaction.PNG" width="200px" height="200px" alt=""></center>
+              <p>&nbsp; <br>&nbsp;  &nbsp; &nbsp; Chemiluminescence Reaction เป็นปรากกฏการณ์ที่สารปล่อยพลังงานในรูปแบบของแสงออกมาเมื่อเกิดปฏิกิริยาเคมีขึ้น 
+                โดยปฏิกิริยาเคมีจะกระตุ้นให้เกิดพลังงานซึ่งไปเหนี่ยวนำอิเล็กตรอนที่สภาวะพื้น (Ground State) ไปยังสภาวะเร้า (Excited State)
+                และเมื่ออิเล็กตรอนกลับสู่สภาวะพื้นก็จะคายพลังงานในรูปแบบแสงออกมา  </p>
+             </div>
+           
+           </div>
+
+           <div id="myModal2" class="modal2">
+
+            <!-- Modal content -->
+             <div class="modal-content2">
+              <span class="close2">&times;</span>
+              <center><h2>หลักการทำงาน PMT </h2></center>
+              <br><center><img src="Picture\PMT1.jpg" width="300px" height="200px" alt=""></center>
+              <p>&nbsp; <br>&nbsp;  &nbsp; &nbsp; Photomulitiplier tube คือ หลอกสูญญากาศที่แปลงโฟตอนตกกระทบเป็นสัญญาณไฟฟ้า
+                PMT จะมีการเพิ่มจำนวนของอิเล็กตรอนโดยการเร่งอิเล็กตรอนที่หลุดออกมาไปชนกับแผ่นโลหะชั้นถัดๆไปซึ่งมีความต่างศักย์สูงขึ้นตามลำดับ 
+                ทำให้สามารถเพิ่มจำนวนของอิเล็กตรอนได้อย่างมหาศาลทำให้วัดกระแสได้ดีมาก แม้จะมีแสงตกกระทบน้อยมาก (Sensitivity สูงมาก)  </p>
+             </div>
+           
+           </div>
+           <div id="myModal3" class="modal3">
+
+            <!-- Modal content -->
+             <div class="modal-content3">
+              <span class="close3">&times;</span>
+              <center><h2>หลักการผลิต Ozone</h2></center><br>
+                <div class="ozone_1">
+                    <center><img src="Picture\Gen O3.jpg" width="220px" height="200px" alt=""></center>
+                </div>
+                <div class="ozone_2">
+                    <center><img src="Picture\Gen O3 1.jpg" width="220px" height="200px" alt=""></center>
+                </div>
+              <p>&nbsp; <br>&nbsp;  &nbsp; &nbsp; ต้องใช้ O2 ที่แห้งและบริสุทธิ์ผ่านเข้าไปในสนามไฟฟ้าหลายพันโวลท์ ทั้งชนิดความถี่ต่ำ 
+                (50 Hz – 100 Hz) ความถี่ปานกลาง (100 Hz – 1000 Hz) และความถี่สูง (1000 Hz ขึ้นไป) ที่บริเวณ Discharge gap 
+                ซึ่งเกิดจากการผลิตกระแสไฟฟ้าที่บริเวณ Dielectric Surface ณ สนามไฟฟ้าแห่งนี้มีผลให้ O2 ในอากาศแห้งแตกกระจายตัวออก
+                เป็นออกซิเจนอะตอม (O) ที่มีความคงตัวและไปรวมกับ O2 โมเลกุลอื่น จึงได้เป็น O3 ออกมาด้วยความเข้มข้นสูงตั้งแต่ 1% - 10% โดยน้ำหนัก  </p>
+             </div>
+           
+           </div>
+
+
+           <div id="myModal4" class="modal4">
+
+            <!-- Modal content -->
+             <div class="modal-content4">
+              <span class="close4">&times;</span>
+              <center><h3>State </h3></center><br>
+                <div class="Ground_State">
+                    <center><img src="Picture\state1.png" width="400px" height="200px" alt=""></center>
+                </div>
+              <p>&nbsp; <br>&nbsp;  &nbsp; &nbsp;สถานะพื้น คือสถานะของอะตอมที่อิเล็กตรอนอยู่ในระดับพลังงานต่ำสุด (มีเสถียรภาพมากที่สุด) 
+                <br>&nbsp;  &nbsp; &nbsp;สถานะกระตุ้น คือ สภาวะของอะตอมที่อิเล็กตรอนอยู่ในระดับพลังงานที่สูงกว่าสถานะพื้น
+                เมื่อได้รับพลังงาน ไม่เสถียรจึงต้องคายพลังงานออกมา เพื่อกลับสู่สภาวะพื้น</p>                        
+             </div>
+           
+           </div>
+
+           <script src="./42i.js"></script>
+
+    </body>
